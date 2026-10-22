@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse handcrafted cakes, pastries, beverages, and bakery merchandise from Bakez Bitz.">
+    <title>Bakerz Bitz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="#home" class="logo"> <img src="images/logo.webp" alt="Bakez Bitz logo"></a>
+        <nav class="navbar">
+            <a href="#home" target="_self">Home</a>
+            <a href="#about" target="_self">About</a>
+            <a href="#cakes" target="_self">Cakes</a>
+            <a href="#pastries" target="_self">Pastries</a>
+            <a href="#beverages" target="_self">Beverages</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#merch">Merchandise</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="cart-icon"><i class="fa-solid fa-cart-arrow-down"></i><span class="cart-badge">0</span></div>
+            <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+
+        <div class="search-form">
+            <input type="search" name="search" id="search-box" placeholder="search here....">
+            <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-list">
+                <!-- Cart items rendered dynamically via JS -->
+            </div>
+            <div class="cart-total-container">
+                <h3>Total: <span class="cart-total-price">$0.00</span></h3>
+            </div>
+            <a href="#" class="btn checkout-btn">Checkout</a>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="hero">
+            <h3>Where smiles are served daily.</h3>
+            <p>300+ Delicious Bakery Products, Indulge in handcrafted cakes, flaky pastries, creamy cheesecakes, and
+                artisan beverages. Made fresh daily with premium ingredients for every occasion.</p>
+            <a href="#cakes" class="btn">Get Yours Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h1 class="title"><span>About</span> Us</h1>
+        <div class="container">
+            <div class="img-box">
+                <img src="images/cheesecake/cheesecake1.jpg" alt="Bakez Bitz Cheesecake">
+                <div class="badge">
+                    <span>300+</span>
+                    <small>Dairy Items</small>
+                </div>
+            </div>
+
+            <div class="content">
+                <span class="subtitle">Welcome to Bakez Bitz</span>
+                <h2>Where Quality Meets Passion</h2>
+                <p class="lead">
+                    At Bakez Bitz, baking isn't just our business—it’s our passion. As a cozy local café and bakery, we
+                    take pride in serving over 300+ fresh dairy delights, handcrafted treats, and artisanal beverages
+                    every single day.
+                </p>
+
+                <blockquote class="motto">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Where smiles are served daily.</p>
+                </blockquote>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                        <div>
+                            <h4>Unbleached Flour</h4>
+                            <p>No artificial additives or bleached grains—ever.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-heart"></i>
+                        <div>
+                            <h4>Family-First Quality</h4>
+                            <p>If we wouldn't feed it to our family, we won't serve it to yours.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <div>
+                            <h4>Cozy Sanctuary</h4>
+                            <p>A welcoming space built to slow down and enjoy fresh brews.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-seedling"></i>
+                        <div>
+                            <h4>Pure Ingredients</h4>
+                            <p>Real butter, premium cocoa, and complete transparency.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#cakes" class="btn">Explore Our Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cakes Section -->
+    <section class="cakes" id="cakes">
+        <h3 class="title">Our <span>Cakes</span></h3>
+        
+        <div class="filter-container">
+            <label for="filter-cakes">Sort By:</label>
+            <select id="filter-cakes" class="filter-select" data-target="cakes">
+                <option value="default">Default</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+                <option value="a-z">Alphabetically: A-Z</option>
+                <option value="z-a">Alphabetically: Z-A</option>
+            </select>
+        </div>
+
+        <div class="wrapper">
+            <div class="cake-card" data-name="Black Forest Cake" data-price="22.99">
+                <img src="images/cakes/Black Forest Cake.jpg" alt="">
+                <h3>Black Forest Cake</h3>
+                <div class="price">$22.99/-</div>
+                <button class="btn add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="cake-card" data-name="Mixed Berry Layer Cake" data-price="32.99">
+                <img src="images/cakes/Mixed Berry Layer Cake.jpg" alt="">
+                <h3>Mixed Berry Layer Cake</h3>
+                <div class="price">$32.99/- <span>$40.99/-</span></div>
+                <button class="btn add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="cake-card" data-name="Red Velvet Chocolate Layer Cake" data-price="29.99">
+                <img src="images/cakes/Red Velvet  Chocolate Layer Cake.jpg" alt="">
+                <h3>Red Velvet Chocolate Layer Cake</h3>
+                <div class="price">$29.99 /-<span>$45.99/-</span></div>
+                <button class="btn add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="cake-card" data-name="Tiered Wedding Cake" data-price="399.00">
+                <img src="images/cakes/Tiered Wedding Cake.jpg" alt="">
+                <h3>Tiered Wedding Cake</h3>
+                <div class="price">$399/- <span>$599/-</span></div>
+                <button class="btn add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="cake-card" data-name="Mango Pineapple Cream Cake" data-price="25.99">
+                <img src="images/cakes/Mango  Pineapple Cream Cake.jpg" alt="">
+                <h3>Mango Pineapple Cream Cake</h3>
+                <div class="price">$25.99/-</div>
+                <button class="btn add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="cake-card" data-name="Lime CheeseCake" data-price="49.90">
+                <img src="images/cakes/Lime Cheesecake.jpg" alt="">
+                <h3>Lime CheeseCake</h3>
+                <div class="price">$49.9/-</div>
+                <button class="btn add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pastries Section -->
+    <section class="pastries" id="pastries">
+        <h1 class="title">Our <span>Pastries</span></h1>
+
+        <div class="filter-container">
+            <label for="filter-pastries">Sort By:</label>
+            <select id="filter-pastries" class="filter-select" data-target="pastries">
+                <option value="default">Default</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+                <option value="a-z">Alphabetically: A-Z</option>
+                <option value="z-a">Alphabetically: Z-A</option>
+            </select>
+        </div>
+
+        <div class="wrapper">
+            <div class="pastries-card" data-name="mango cheesecake pastry" data-price="30.99">
+                <div class="icons">
+                    <a class="fas fa-shopping-cart add-to-cart-btn"></a>
+                    <a class="fa-solid fa-heart"></a>
+                    <a class="fas fa-eye"></a>
+                </div>
+                <div class="img">
+                    <img src="images/pasties/pastries 1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>mango cheesecake pastry</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$30.99/- <span>$50.99/-</span></div>
+                </div>
+            </div>
+
+            <div class="pastries-card" data-name="Blueberry mousse Pastry" data-price="18.99">
+                <div class="icons">
+                    <a class="fas fa-shopping-cart add-to-cart-btn"></a>
+                    <a class="fa-solid fa-heart"></a>
+                    <a class="fas fa-eye"></a>
+                </div>
+                <div class="img">
+                    <img src="images/pasties/pastries 2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Blueberry mousse Pastry</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="price">$18.99/- <span>$35.99/-</span></div>
+                </div>
+            </div>
+
+            <div class="pastries-card" data-name="Chocolate Pastry" data-price="10.99">
+                <div class="icons">
+                    <a class="fas fa-shopping-cart add-to-cart-btn"></a>
+                    <a class="fa-solid fa-heart"></a>
+                    <a class="fas fa-eye"></a>
+                </div>
+                <div class="img">
+                    <img src="images/pasties/pastries 3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Chocolate Pastry</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="price">$10.99/- <span>$15.99/-</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beverages Section -->
+    <section class="beverages" id="beverages">
+        <h1 class="title">Our <span>Beverages</span></h1>
+
+        <div class="filter-container">
+            <label for="filter-beverages">Sort By:</label>
+            <select id="filter-beverages" class="filter-select" data-target="beverages">
+                <option value="default">Default</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+                <option value="a-z">Alphabetically: A-Z</option>
+                <option value="z-a">Alphabetically: Z-A</option>
+            </select>
+        </div>
+
+        <div class="wrapper">
+            <div class="Beverages-card" data-name="Lemonade Mint" data-price="5.99">
+                <div class="img"> <img src="images/beverages/lemonade.jpg" alt=""></div>
+                <div class="content">
+                    <h3>Lemonade Mint</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$5.99/- <span>$9.99/-</span></div>
+                    <button class="btn add-to-cart-btn">Add To cart</button>
+                </div>
+            </div>
+
+            <div class="Beverages-card" data-name="Americano" data-price="10.99">
+                <div class="img"> <img src="images/beverages/Americano.jpg" alt=""></div>
+                <div class="content">
+                    <h3>Americano</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$10.99/- <span>$18.99/-</span></div>
+                    <button class="btn add-to-cart-btn">Add To cart</button>
+                </div>
+            </div>
+
+            <div class="Beverages-card" data-name="Cappuccino" data-price="12.99">
+                <div class="img"> <img src="images/beverages/Cappuccino.jpg" alt=""></div>
+                <div class="content">
+                    <h3>Cappuccino</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$12.99/- <span>$15.99/-</span></div>
+                    <button class="btn add-to-cart-btn">Add To cart</button>
+                </div>
+            </div>
+
+            <div class="Beverages-card" data-name="Strawberry Smoothie" data-price="15.99">
+                <div class="img"> <img src="images/beverages/strawberry.jpg" alt=""></div>
+                <div class="content">
+                    <h3>Strawberry Smoothie</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$15.99/- <span>$20.99/-</span></div>
+                    <button class="btn add-to-cart-btn">Add To cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h1 class="title">Our <span>Gallery</span></h1>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/cheesecake/cheesecake1.jpg" alt="Artisanal Cheesecake">
+                <div class="overlay">
+                    <h3>Artisanal Cheesecake</h3>
+                    <p>Fresh Cream & Berry Drizzle</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/beverages/Cappuccino.jpg" alt="Signature Latte Art">
+                <div class="overlay">
+                    <h3>Signature Cappuccino</h3>
+                    <p>Freshly Brewed Espresso</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cakes/Tiered Wedding Cake.jpg" alt="Flaky Pastries">
+                <div class="overlay">
+                    <h3>Tiered Wedding Cake</h3>
+                    <p>Tiered to perfection for a love that’s built to last.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/beverages/lemonade.jpg" alt="Mint Lemonade">
+                <div class="overlay">
+                    <h3>Iced Mint Lemonade</h3>
+                    <p>Refreshing Citrus Cooler</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/beverages/strawberry.jpg" alt="Strawberry Smoothie">
+                <div class="overlay">
+                    <h3>Strawberry Smoothie</h3>
+                    <p>Made with Pure Fresh Milk</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/beverages/Americano.jpg" alt="Hot Americano">
+                <div class="overlay">
+                    <h3>Classic Americano</h3>
+                    <p>Slow-Roasted Coffee Beans</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchandise Section -->
+    <section class="merch" id="merch">
+        <h1 class="title">Our <span>Merchandise</span></h1>
+
+        <div class="filter-container">
+            <label for="filter-merch">Sort By:</label>
+            <select id="filter-merch" class="filter-select" data-target="merch">
+                <option value="default">Default</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+                <option value="a-z">Alphabetically: A-Z</option>
+                <option value="z-a">Alphabetically: Z-A</option>
+            </select>
+        </div>
+
+        <div class="wrapper">
+            <div class="merch-card" data-name="Signature Canvas Tote" data-price="14.99">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart add-to-cart-btn"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="img">
+                    <img src="images/merchandise/Bag.jpg" alt="Bakez Bitz Tote Bag">
+                </div>
+                <div class="content">
+                    <h3>Signature Canvas Tote</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="price">$14.99/- <span>$19.99/-</span></div>
+                    <button class="btn add-to-cart-btn">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="merch-card" data-name="Ceramic Coffee Mug" data-price="12.99">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart add-to-cart-btn"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="img">
+                    <img src="images/merchandise/coffee cup.jpg" alt="Bakez Bitz Ceramic Mug">
+                </div>
+                <div class="content">
+                    <h3>Ceramic Coffee Mug</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$12.99/- <span>$16.99/-</span></div>
+                    <button class="btn add-to-cart-btn">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="merch-card" data-name="Baker's Canvas Apron" data-price="24.99">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart add-to-cart-btn"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="img">
+                    <img src="images/merchandise/apron.jpg" alt="Baker's Canvas Apron">
+                </div>
+                <div class="content">
+                    <h3>Baker's Canvas Apron</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="price">$24.99/- <span>$29.99/-</span></div>
+                    <button class="btn add-to-cart-btn">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="merch-card" data-name="House Blend Roast (250g)" data-price="18.99">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart add-to-cart-btn"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="img">
+                    <img src="images/merchandise/shopper.jpg" alt="House Blend Coffee Beans">
+                </div>
+                <div class="content">
+                    <h3>House Blend Roast (250g)</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$18.99/- <span>$22.99/-</span></div>
+                    <button class="btn add-to-cart-btn">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <section class="review" id="review">
+        <h1 class="title">Customer's <span>Review</span></h1>
+        <div class="wrapper">
+            <div class="review-card">
+                <img src="images/quote.webp" alt="Decorative quotation mark">
+                <p>Hands down the best bakery in town! I ordered a custom birthday cake and a dozen croissants for a
+                    weekend brunch. The cake was not only gorgeous but incredibly moist, and the croissants had that
+                    perfect, buttery, flaking crust you usually only find in Paris. The staff was super friendly when I
+                    picked everything up, and the shop smelled like absolute heaven. This is officially my go-to spot
+                    for every special occasion!</p>
+                <img class="customer-img" src="images/woman1.jpg" alt="">
+                <h3>Aizal</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <img src="images/quote.png" alt="">
+                <p>Decent local bakery with a lovely atmosphere. The morning buns and coffee were great, but the
+                    cinnamon roll I tried was a bit on the dry side and lacked enough filling. It’s a bit pricier than
+                    other spots nearby, so I was hoping for total consistency across the board. I'll probably come back
+                    to try their savory items, but some of the sweet pastries could use a little tweaking.</p>
+                <img class="customer-img" src="images/woman2.jpg" alt="">
+                <h3>Aliza</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <img src="images/quote.png" alt="">
+                <p>The baked goods here are top-tier. Their sourdough loaf has an incredible crust and chew, and the
+                    chocolate chip cookies are completely addictive—crispy edges with a soft, gooey center. The only
+                    reason I'm giving 4 stars instead of 5 is that the line moved pretty slowly on Saturday morning, and
+                    they had run out of a few popular pastries by 10 AM. Get there early if you want the full selection,
+                    because the food itself is worth every penny.</p>
+                <img class="customer-img" src="images/man1.jpg" alt="">
+                <h3>Ali Akbar</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h1 class="title">Contact <span>Us</span></h1>
+        <div class="contents">
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24244.171156918947!2d-74.51875858656874!3d40.57424521786666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b7a331159367%3A0x2fa80cc896f93b4f!2sBakerz%20Bite!5e0!3m2!1sen!2s!4v1788768055934!5m2!1sen!2s" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+
+            <form id="contact-form">
+                <span class="subtitle">Reach Out To Us</span>
+                <h3>Get In Touch</h3>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-location-dot"></i>
+                        <span>123 Bakery St, City</span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <span>7:00 AM - 9:00 PM</span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <span class="fas fa-user"></span>
+                    <input type="text" name="name" placeholder="Full Name" autocomplete="name" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="fas fa-phone"></span>
+                    <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel">
+                </div>
+
+                <button type="submit" class="btn">Contact Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin-in"></a>
+            <a href="#" class="fab fa-pinterest-p"></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#cakes">Cakes</a>
+            <a href="#pastries">Pastries</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="credit">
+            Created By <span>Bakez Bitz</span> | All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
